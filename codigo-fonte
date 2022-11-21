@@ -24,7 +24,7 @@ void apresentar(){
 void receberUsuarios(){
     printf("\n\n\n\tPlayer 1 digite seu nome: ");
     scanf("%s", jogador1);
-    printf("\tPlayer 2 digite seu nome: ");
+    printf("\n\tPlayer 2 digite seu nome: ");
     scanf("%s", jogador2);
     system("cls");
 };
@@ -60,14 +60,27 @@ void jogar(){
     printf("\n\n\tPlayer 1: X  //  Player 2: O\n");
 
     do{
-        printf("\n\n\tDigite a linha da sua jogada: ");
-        scanf("%d", &linha);
-        printf("\tDigite a coluna da sua jogada: ");
-        scanf("%d", &coluna);
-        system("cls");
-        if(jogoDaVelha[linha][coluna] != ' ' || linha < 0 || linha > 2 || coluna < 0 || coluna > 2){
-            printf("\n\tJogada Inválida! Jogue Novamente\n");
-            printarTab();
+        if(player == 0){
+            printf("\n\n\tJogador X digite a linha da sua jogada: ");
+            scanf("%d", &linha);
+            printf("\tJogador X digite a coluna da sua jogada: ");
+            scanf("%d", &coluna);
+            system("cls");
+            if(jogoDaVelha[linha][coluna] != ' ' || linha < 0 || linha > 2 || coluna < 0 || coluna > 2){
+                printf("\n\tJogada Inválida! Jogue Novamente\n");
+                printarTab();
+            }
+        }
+        else{
+            printf("\n\n\tJogador O digite a linha da sua jogada: ");
+            scanf("%d", &linha);
+            printf("\tJogador O digite a coluna da sua jogada: ");
+            scanf("%d", &coluna);
+            system("cls");
+            if(jogoDaVelha[linha][coluna] != ' ' || linha < 0 || linha > 2 || coluna < 0 || coluna > 2){
+                printf("\n\tJogada Inválida! Jogue Novamente\n");
+                printarTab();
+            }
         }
     }while(jogoDaVelha[linha][coluna] != ' ' || linha < 0 || linha > 2 || coluna < 0 || coluna > 2);
 
@@ -138,7 +151,7 @@ void checarVitoria(){
        }
 };
 
-void posicionar(int x, int y){
+int posicionar(int x, int y){
     COORD coord;
     coord.X = x;
     coord.Y = y;
@@ -146,7 +159,7 @@ void posicionar(int x, int y){
 };
 
 void creditos(){
-    printf("\tGame Desenvolvido por:\n\n");
+    printf("\tGame Desenvolvido por:\n");
     printf("\t====> Luan Martins\n");
     printf("\t====> Igor Marques\n");
 };

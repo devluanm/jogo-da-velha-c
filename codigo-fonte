@@ -44,21 +44,23 @@ void printarTab(){
         for(c = 0; c < 3; c++){
             printf("\t%c", jogoDaVelha[l][c]);
             if(c < 2){
-                printf("|");
+                printf(" |");
             }
             if(c == 2){
                 printf("   %d", l);
             }
         }
-        printf("\n    --------------------\n");
+        if(l < 2){
+            printf("\n     --------------------\n");
+        }
     }
 };
 
 void jogar(){
-    printf("\n\tPlayer 1: X  //  Player 2: O\n");
+    printf("\n\n\tPlayer 1: X  //  Player 2: O\n");
 
     do{
-        printf("\n\tDigite a linha da sua jogada: ");
+        printf("\n\n\tDigite a linha da sua jogada: ");
         scanf("%d", &linha);
         printf("\tDigite a coluna da sua jogada: ");
         scanf("%d", &coluna);

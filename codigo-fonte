@@ -186,6 +186,7 @@ int main(){
                 jogar();
                 checarVitoria();
             }while(vitoria == 0);
+            vitoria = 0;
             voltarMenu();
             main();
             break;
@@ -207,3 +208,4 @@ int main(){
             break;
     }
 }
+

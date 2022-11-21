@@ -160,7 +160,7 @@ int posicionar(int x, int y){
 
 void creditos(){
     printf("\tGame Desenvolvido por:\n");
-    printf("\t====> Luan Martins\n");
+    printf("\n\t====> Luan Martins\n");
     printf("\t====> Igor Marques\n");
 };
 

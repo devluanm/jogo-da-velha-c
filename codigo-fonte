@@ -162,6 +162,8 @@ void creditos(){
     printf("\tGame Desenvolvido por:\n");
     printf("\n\t====> Luan Martins\n");
     printf("\t====> Igor Marques\n");
+    printf("\t====> Antônio Augusto\n");
+    printf("\t====> Eduardo Fernandes\n");
 };
 
 void voltarMenu(){
@@ -192,7 +194,7 @@ int main(){
             main();
             break;
         case '2':
-            posicionar(0, 20);
+            posicionar(0, 18);
             creditos();
             voltarMenu();
             main();

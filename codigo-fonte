@@ -7,7 +7,7 @@ char jogoDaVelha[3][3], jogador1[24], jogador2[24], op;
 int l, c, player = 0, linha, coluna, vitoria = 0;
 
 void apresentar(){
-    printf("\t---------------------------------\n");
+    printf("\n\t---------------------------------\n");
     printf("\t---------------------------------\n");
     printf("\t--------  JOGO DA VELHA  --------\n");
     printf("\t---------------------------------\n");
@@ -63,7 +63,7 @@ void jogar(){
         if(player == 0){
             printf("\n\n\tJogador X digite a linha da sua jogada: ");
             scanf("%d", &linha);
-            printf("\tJogador X digite a coluna da sua jogada: ");
+            printf("\n\tJogador X digite a coluna da sua jogada: ");
             scanf("%d", &coluna);
             system("cls");
             if(jogoDaVelha[linha][coluna] != ' ' || linha < 0 || linha > 2 || coluna < 0 || coluna > 2){
@@ -74,7 +74,7 @@ void jogar(){
         else{
             printf("\n\n\tJogador O digite a linha da sua jogada: ");
             scanf("%d", &linha);
-            printf("\tJogador O digite a coluna da sua jogada: ");
+            printf("\n\tJogador O digite a coluna da sua jogada: ");
             scanf("%d", &coluna);
             system("cls");
             if(jogoDaVelha[linha][coluna] != ' ' || linha < 0 || linha > 2 || coluna < 0 || coluna > 2){
